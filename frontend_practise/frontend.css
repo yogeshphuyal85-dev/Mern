@@ -1,0 +1,392 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: #f7f8fc;
+}
+
+header {
+    height: 3rem;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+header h1 span {
+    color: #ed3d68;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 3.5rem;
+    margin-left: 25.5rem;
+    font-size: 0.75rem;
+}
+
+header li {
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    min-height: calc(100vh - 3rem);
+}
+
+aside {
+    width: 200px;
+    min-height: calc(100vh - 3rem);
+    background-color: #17172d;
+    color: white;
+    padding: 2rem 0.8rem;
+}
+
+.menu-title {
+    font-size: 1rem;
+    color: #9292a5;
+    margin-bottom: 0.7rem;
+    margin-left: 0.4rem;
+}
+
+.menu-item {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+    margin-bottom: 0.25rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.menu-item.active {
+    background-color: #47212a;
+}
+
+.menu-item span {
+    font-size: 0.75rem;
+}
+
+.account {
+    margin-top: 2rem;
+}
+
+.menu-item button {
+    width: 160px;
+    padding: 0.1rem;
+    margin-top: 8rem;
+    background-color: #5f2a37;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    padding: 2rem 4rem;
+    gap: 3rem;
+}
+
+.course-content {
+    width: 65%;
+    position: relative;
+}
+
+.course-image {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 230px;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 0.5rem;
+}
+
+.course-tags {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-size: 0.5rem;
+}
+
+.course-tags span {
+    background-color: #eeeeee;
+    color: #222;
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+}
+
+.course-tags b {
+    color: #222;
+}
+
+.course-info h2 {
+    text-align: center;
+    margin-top: 3.2rem;
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+.course-details {
+    position: absolute;
+    bottom: 0.4rem;
+    right: 0.5rem;
+    font-size: 0.45rem;
+}
+
+.tabs {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.7rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    font-size: 0.7rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.active-tab {
+    border-bottom: 2px solid #24187d;
+}
+
+.right-side {
+    width: 250px;
+}
+
+.progress-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 0.6rem 1rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.progress-card h3 {
+    text-align: center;
+    font-size: 0.75rem;
+    border-top: 2px solid #1b2572;
+    padding-top: 0.2rem;
+}
+
+.progress-card p {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.progress-card small {
+    font-size: 0.75rem;
+    color: #777;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+}
+
+.progress-bar div {
+    width: 65%;
+    height: 100%;
+    background-color: #2f1f7d;
+    border-radius: 5px;
+}
+
+.progress-card button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.45rem;
+    border: none;
+    background-color: #302872;
+    color: white;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.includes {
+    margin-top: 2.5rem;
+    font-size: 1rem;
+}
+
+.includes h4 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.includes p {
+    margin-bottom: 0.6rem;
+}
+
+.overview {
+    margin-top: 1rem;
+}
+
+.overview > h2 {
+    font-size: 1.5rem;
+    font-weight: 1000;
+    margin-bottom: 0.3rem;
+}
+
+.about-box {
+    background-color: white;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.about-box > p {
+    font-size: 0.85rem;
+    line-height: 1.35;
+    color: #666;
+    max-width: 95%;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+}
+
+.feature span {
+    color: #777;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.feature p {
+    color: #777;
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+.about-box h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.requirements {
+    padding-left: 1rem;
+}
+
+.requirements li {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.7rem;
+    padding-left: 0.3rem;
+}
+
+.related-courses {
+    margin-top: 2rem;
+}
+
+.related-courses > h3 {
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.related-card {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.related-image {
+    width: 100%;
+    height: 95px;
+    position: relative;
+    overflow: hidden;
+}
+
+.related-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.related-image span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #397e4d;
+    color: white;
+    font-size: 0.5rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.related-info {
+    padding: 0.6rem;
+}
+
+.related-info h4 {
+    font-size: 0.7rem;
+    line-height: 1.3;
+    font-weight: 500;
+    min-height: 2.2rem;
+}
+
+.related-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.related-bottom p {
+    font-size: 0.45rem;
+    color: #999;
+}
+
+.related-bottom strong {
+    font-size: 0.5rem;
+    color: #e13b65;
+}

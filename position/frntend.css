@@ -1,0 +1,313 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container{
+    height:100vh;
+    background-color: rgb(24, 25, 70);
+    display: flex;
+    flex-direction: column;
+}
+header{
+  padding: 0 2rem;
+  height: 3rem;
+  width:100%;
+  
+  background-color: rgb(238, 241, 238);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    cursor: pointer;
+    
+}
+.btn1{
+    padding: 0.5rem 1rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.btn2{
+    padding: 0.5rem 1rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.btn1:hover{
+    background-color: rgb(39, 71, 199);
+    color: white;
+}
+.btn2:hover{
+    background-color: rgb(118, 146, 27);
+    color: white;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.student-count{
+    margin-top: 40px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(211, 236, 121);
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.student-count:hover{
+    background-color: rgb(103, 104, 165);
+    color: white;
+}
+.seto{
+    color: white;
+    font-size: 3rem;
+}
+.rato{
+    color: rgb(42, 14, 14);
+    font-size: 3rem;
+}
+.paragraph{
+    margin-top: 20px;
+    color:white;
+
+}
+.hero-btn{
+    margin-top: 20px;
+}
+.paragraph span {
+    margin-left: 27px;
+}
+.brow{
+    padding: 0.5rem 1rem;
+    margin-top: 40px;
+    font-size: 1rem;
+    background-color: rgb(55, 16, 16);
+    color: white;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    
+}
+.demo{
+    padding: 0.5rem 1rem;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(4, 3, 24);
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.stats {
+    width: 100%;
+    border-top: 1px solid #292a40;
+
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+
+    padding-top: 2rem;
+    margin-top: 5rem;
+}
+.stat {
+    text-align: center;
+}
+.stat h3 {
+    font-size: 2rem;
+    color: white;
+}
+.stat p {
+    font-size: 1rem;
+    color: #0e0f16;
+    margin-top: 0.3rem;
+}
+ .view-all{
+margin-left:55rem;
+padding: 0.5rem 4rem;
+cursor: pointer;
+border: 2px solid black;
+border-radius: 0.5rem;
+margin-bottom: 40px;
+} 
+.arko-container{
+    background-color: #ffffff;
+    padding: 4rem 8%;
+    color: #17182c;
+}
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.course-card {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}   
+.course-image {
+    height: 140px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: white;
+}
+.level {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.55rem;
+    padding: 4px 7px;
+    border-radius: 3px;
+}
+.categories{
+    width: 100%;
+    margin: 80px auto;
+}
+.category-title{
+    margin-bottom: 35px;
+}
+.category-title h2{
+    font-size: 2.3rem;
+    color: #111;
+    margin-bottom: 8px;
+}
+.category-title p{
+    color: gray;
+    font-size: 15px;
+}
+.category-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.category-card{
+    padding: 30px 20px;
+    border-radius: 15px;
+    transition: .3s;
+    cursor: pointer;
+}
+.category-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.12);
+}
+.icon{
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+.category-card h3{
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.category-card p{
+    color: gray;
+    font-size: 14px;
+}
+.trainer{
+    padding:90px 20px;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.trainer-content h2{
+    font-size:3rem;
+    line-height:1.2;
+    margin-bottom:20px;
+    color:#17172f;
+}
+.trainer-content p{
+    color:#777;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+.trainer-buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+}
+.trainer-btn{
+    background:#ff4fe8;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+.trainer-btn:hover{
+    background:#2a9cc2;
+    transform:translateY(-3px);
+}
+.learn-btn{
+    background:white;
+    border:1px solid #ddd;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+.learn-btn:hover{
+    background:#17172f;
+    color:white;
+}
+.footer{
+    background:#126c48;
+    color:white;
+    text-align:center;
+    padding:80px 20px 30px;
+}
+.footer h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+.footer p{
+    color:#c9c9d4;
+    line-height:1.8;
+}
+.footer-btn{
+    margin-top:35px;
+    background:#27954f;
+    color:white;
+    border:none;
+    padding:16px 36px;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+.footer-btn:hover{
+    background:#260b12;
+    transform:translateY(-3px);
+}
+.footer hr{
+    border:none;
+    height:1px;
+    background:#3c3c58;
+    margin:70px auto 25px;
+    width:90%;
+}
+.copyright{
+    font-size:14px;
+    color:#9f9fb2;
+}
