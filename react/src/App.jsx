@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div className="underline">
+    <div className="text-amber-900">
       Hello, World!
     </div>
   )
