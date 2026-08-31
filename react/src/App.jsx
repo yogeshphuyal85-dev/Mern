@@ -1,8 +1,8 @@
+import React from 'react'
+import FRONTEND from './frntend.jsx'
 function App() {
   return (
-    <div className="text-amber-900 cursor-pointer hover:text-amber-300">
-      Hello, World!
-    </div>
+    <FRONTEND />
   )
 }
 
