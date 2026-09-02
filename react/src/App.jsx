@@ -1,5 +1,5 @@
 import React from 'react'
-import FRONTEND from './frntend.jsx'
+import FRONTEND from './components/frntend.jsx'
 function App() {
   return (
     <FRONTEND />
