@@ -239,7 +239,7 @@ function FRONTEND() {
               {/* Course Content */}
               <div className="p-5">
 
-                <h3 className="text-lg font-bold leading-6 min-h-[48px]">
+                <h3 className="text-lg font-bold leading-6 min-h-12">
                   {course.title}
                 </h3>
 
