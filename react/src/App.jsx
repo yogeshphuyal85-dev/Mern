@@ -1,6 +1,6 @@
-import React from 'react'
-import Todo from './components/todo.jsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import React from "react";
+import Todo from "./components/todo.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const App = () => {
 
@@ -9,11 +9,11 @@ const App = () => {
       path: "/",
       element: <Todo />
     }
-  ])
+  ]);
 
   return (
     <RouterProvider router={route} />
-  )
-}
+  );
+};
 
-export default App
+export default App;
