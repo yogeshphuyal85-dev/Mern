@@ -1,6 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Todo() {
+  const [todos, setTodos] = useState([]);
+
+  const [showForm, setShowForm] = useState(true);
+
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [priority, setPriority] = useState("");
+
+  // Submit
+  const handleSubmit = () => {
+    if (!title || !description || !priority) {
+      alert("Please fill all fields!");
+      return;
+    }
+
+    const newTodo = {
+      id: Date.now(),
+      title: title,
+      description: description,
+      priority: priority,
+    };
+
+    
+    setTodos([...todos, newTodo]);
+
+   
+    setTitle("");
+    setDescription("");
+    setPriority("");
+
+   
+    setShowForm(false);
+  };
+
+  // Cancel
+  const handleCancel = () => {
+    setTitle("");
+    setDescription("");
+    setPriority("");
+    setShowForm(false);
+  };
+
+  // Add New Todo
+  const handleAdd = () => {
+    setTitle("");
+    setDescription("");
+    setPriority("");
+
+    setShowForm(true);
+  };
+
   return (
     <div className="min-h-screen border-2 border-black bg-[#3a1111]">
 
@@ -10,130 +61,112 @@ function Todo() {
 
       {/* Search Section */}
       <div className="flex justify-center items-center mt-[20px] py-[10px]">
+
         <input
-          className="w-1/2 border-none text-3xl bg-white"
+          className="w-1/2 border-2 border-black text-2xl bg-white p-[10px] rounded-lg"
           type="text"
           placeholder="Search"
         />
 
-        <button className="border border-black text-2xl cursor-pointer py-[10px] px-[20px] bg-white rounded-lg">
+        <button
+          onClick={handleAdd}
+          className="ml-[10px] border-2 border-black text-2xl cursor-pointer py-[10px] px-[20px] bg-white rounded-lg hover:bg-gray-300"
+        >
           Add
         </button>
+
       </div>
 
       {/* Boxes Container */}
       <div className="grid grid-cols-4 gap-[20px] px-[20px] mt-[20px]">
 
-        {/* First Box */}
-        <div className="h-[33vh] border-2 border-black bg-[#124f4f]">
+        {/* ================= FORM BOX ================= */}
 
-          <h2 className="text-center text-white text-2xl pt-[10px]">
-            Title
-          </h2>
+        {showForm && (
+  <div className="min-h-[420px] border-2 border-black bg-[#124f4f] p-[20px]">
+    
+    <h2 className="text-center text-white text-2xl font-bold mb-[15px]">
+      Add Todo
+    </h2>
 
-          <h3 className="text-center text-white text-1xl pt-[15px]">
-            Description
-          </h3>
+    <input
+      className="w-full border-2 border-black p-[10px] text-xl bg-white"
+      type="text"
+      placeholder="Enter Title"
+      value={title}
+      onChange={(e) => setTitle(e.target.value)}
+    />
 
-          <h3 className="text-center text-white text-1xl pt-[15px]">
-            Priority
-          </h3>
+    <textarea
+      className="w-full border-2 border-black p-[10px] text-lg mt-[15px] bg-white resize-none"
+      placeholder="Enter Description"
+      rows="3"
+      value={description}
+      onChange={(e) => setDescription(e.target.value)}
+    />
 
-          <div className="mt-[20px] text-center">
-            <button className="py-[10px] px-[20px] m-[5px] rounded-lg cursor-pointer border-2 border-black hover:bg-gray-300">
-              Submit
-            </button>
+    <select
+      className="w-full border-2 border-black p-[10px] text-lg mt-[15px] bg-white"
+      value={priority}
+      onChange={(e) => setPriority(e.target.value)}
+    >
+      <option value="">Select Priority</option>
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
 
-            <button className="py-[10px] px-[20px] m-[5px] rounded-lg cursor-pointer border-2 border-black hover:bg-gray-300">
-              Cancel
-            </button>
+    <div className="mt-[20px] text-center">
+      <button
+        onClick={handleSubmit}
+        className="py-[10px] px-[25px] m-[5px] cursor-pointer border-2 border-black bg-white hover:bg-green-400"
+      >
+        Submit
+      </button>
+
+      <button
+        onClick={handleCancel}
+        className="py-[10px] px-[25px] m-[5px] cursor-pointer border-2 border-black bg-white hover:bg-red-400"
+      >
+        Cancel
+      </button>
+    </div>
+
+  </div>
+)}
+
+        {/* ================= SAVED TODO BOXES ================= */}
+
+        {todos.map((todo) => (
+          <div
+            key={todo.id}
+            className="h-[33vh] border-2 border-black bg-[#124f4f] rounded-xl p-[20px]"
+          >
+
+            <h2 className="text-center text-white text-2xl font-bold border-b-2 border-white pb-[10px]">
+              {todo.title}
+            </h2>
+
+            <p className="text-white text-lg mt-[20px]">
+              <span className="font-bold">
+                Description:
+              </span>
+
+              <br />
+
+              {todo.description}
+            </p>
+
+            <p className="text-white text-lg mt-[15px]">
+              <span className="font-bold">
+                Priority:
+              </span>{" "}
+
+              {todo.priority}
+            </p>
+
           </div>
-
-        </div>
-
-
-        {/* Second Box */}
-        <div className="h-[33vh] border-2 border-black bg-[#124f4f]">
-
-          <h2 className="text-center text-white text-2xl pt-[10px]">
-            Title
-          </h2>
-
-          <h3 className="text-center text-white text-1xl pt-[15px]">
-            Description
-          </h3>
-
-          <h3 className="text-center text-white text-1xl pt-[15px]">
-            Priority
-          </h3>
-
-          <div className="mt-[20px] text-center">
-            <button className="py-[10px] px-[20px] m-[5px] rounded-lg cursor-pointer border-2 border-black hover:bg-gray-300">
-              Submit
-            </button>
-
-            <button className="py-[10px] px-[20px] m-[5px] rounded-lg cursor-pointer border-2 border-black hover:bg-gray-300">
-              Cancel
-            </button>
-          </div>
-
-        </div>
-
-
-        {/* Third Box */}
-        <div className="h-[33vh] border-2 border-black bg-[#124f4f]">
-
-          <h2 className="text-center text-white text-2xl pt-[10px]">
-            Title
-          </h2>
-
-          <h3 className="text-center text-white text-1xl pt-[15px]">
-            Description
-          </h3>
-
-          <h3 className="text-center text-white text-1xl pt-[15px]">
-            Priority
-          </h3>
-
-          <div className="mt-[20px] text-center">
-            <button className="py-[10px] px-[20px] m-[5px] rounded-lg cursor-pointer border-2 border-black hover:bg-gray-300">
-              Submit
-            </button>
-
-            <button className="py-[10px] px-[20px] m-[5px] rounded-lg cursor-pointer border-2 border-black hover:bg-gray-300">
-              Cancel
-            </button>
-          </div>
-
-        </div>
-
-
-        {/* Fourth Box */}
-        <div className="h-[33vh] border-2 border-black bg-[#124f4f]">
-
-          <h2 className="text-center text-white text-2xl pt-[10px]">
-            Title
-          </h2>
-
-          <h3 className="text-center text-white text-1xl pt-[15px]">
-            Description
-          </h3>
-
-          <h3 className="text-center text-white text-1xl pt-[15px]">
-            Priority
-          </h3>
-
-          <div className="mt-[20px] text-center">
-            <button className="py-[10px] px-[20px] m-[5px] rounded-lg cursor-pointer border-2 border-black hover:bg-gray-300">
-              Submit
-            </button>
-
-            <button className="py-[10px] px-[20px] m-[5px] rounded-lg cursor-pointer border-2 border-black hover:bg-gray-300">
-              Cancel
-            </button>
-          </div>
-
-        </div>
+        ))}
 
       </div>
 
