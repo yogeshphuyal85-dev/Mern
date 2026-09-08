@@ -35,7 +35,7 @@ function Todo() {
     setShowForm(false);
   };
 
-  // Cancel
+  
   const handleCancel = () => {
     setTitle("");
     setDescription("");
