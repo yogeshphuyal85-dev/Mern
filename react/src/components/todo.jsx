@@ -2,9 +2,7 @@ import React, { useState } from "react";
 
 function Todo() {
   const [todos, setTodos] = useState([]);
-
   const [showForm, setShowForm] = useState(true);
-
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [priority, setPriority] = useState("");
