@@ -59,7 +59,7 @@ function Todo() {
         TODO LIST
       </h1>
 
-      {/* Search Section */}
+      
       <div className="flex justify-center items-center mt-[20px] py-[10px]">
 
         <input
