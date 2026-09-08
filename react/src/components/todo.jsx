@@ -131,7 +131,6 @@ function Todo() {
   </div>
 )}
 
-
         {todos.map((todo) => (
           <div
             key={todo.id}
