@@ -78,14 +78,14 @@ function Todo() {
       </div>
 
       {/* Boxes Container */}
-      <div className="grid grid-cols-4 gap-[20px] px-[20px] mt-[20px]">
+      <div className="grid grid-cols-4 gap-[20px] px-[20px] mt-[20px] items-start">
 
         {/* ================= FORM BOX ================= */}
 
         {showForm && (
   <div className="min-h-[420px] border-2 border-black bg-[#124f4f] p-[20px]">
     
-    <h2 className="text-center text-white text-2xl font-bold mb-[15px]">
+    <h2 className="text-center text-white text-2xl font-bold mb-[15px]">4447
       Add Todo
     </h2>
 
