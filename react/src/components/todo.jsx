@@ -135,7 +135,6 @@ function Todo() {
   </div>
 )}
 
-        {/* ================= SAVED TODO BOXES ================= */}
 
         {todos.map((todo) => (
           <div
