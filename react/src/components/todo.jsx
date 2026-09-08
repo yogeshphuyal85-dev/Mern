@@ -75,7 +75,6 @@ function Todo() {
 
       </div>
 
-      
       <div className="grid grid-cols-4 gap-[20px] px-[20px] mt-[20px] items-start">
 
 
