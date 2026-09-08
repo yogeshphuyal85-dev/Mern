@@ -80,7 +80,6 @@ function Todo() {
       {/* Boxes Container */}
       <div className="grid grid-cols-4 gap-[20px] px-[20px] mt-[20px] items-start">
 
-        {/* ================= FORM BOX ================= */}
 
         {showForm && (
   <div className="min-h-[420px] border-2 border-black bg-[#124f4f] p-[20px]">
