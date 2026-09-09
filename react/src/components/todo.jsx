@@ -32,7 +32,6 @@ function Todo() {
    
     setShowForm(false);
   };
-
   
   const handleCancel = () => {
     setTitle("");
