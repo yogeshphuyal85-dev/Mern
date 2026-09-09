@@ -20,7 +20,6 @@ function Todo() {
       description: description,
       priority: priority,
     };
-
     
     setTodos([...todos, newTodo]);
 
