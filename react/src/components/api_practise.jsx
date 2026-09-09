@@ -11,5 +11,13 @@ const Api_practise = () => {
         console.log(vaue.data);
         setValue(vaue.data);
     };
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    return(
+        <div> empty</div>
+    );
+}
 
 export default Api_practise;
