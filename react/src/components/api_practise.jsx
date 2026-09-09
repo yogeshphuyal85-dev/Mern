@@ -71,7 +71,7 @@ const Api_practise = () => {
                         <button
                             className="bg-black text-white px-4 py-2 
                                        rounded-lg hover:bg-gray-800 
-                                       transition"
+                                       transition cursor-pointer"
                         >
                             Add to Cart
                         </button>
