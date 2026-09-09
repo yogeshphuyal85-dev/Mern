@@ -7,9 +7,9 @@ const Api_practise = () => {
 
 
     const fetchData = async () => {
-        const vaue = await axios.get("https://fakestoreapi.com/products");
-        console.log(vaue.data);
-        setValue(vaue.data);
+        const value = await axios.get("https://fakestoreapi.com/products");
+        console.log(value.data);
+        setValue(value.data);
     };
     useEffect(() => {
         fetchData();
