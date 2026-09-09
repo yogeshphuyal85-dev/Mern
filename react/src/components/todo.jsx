@@ -29,7 +29,6 @@ function Todo() {
     setDescription("");
     setPriority("");
 
-   
     setShowForm(false);
   };
   
