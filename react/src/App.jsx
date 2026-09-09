@@ -1,6 +1,7 @@
 import React from "react";
 import Todo from "./components/todo.jsx";
 import FRONTEND from "./components/frntend.jsx";
+import Api_practise from "./components/api_practise.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
@@ -12,8 +13,12 @@ const App = () => {
       element: <Todo />
     },
     {
-      path:"/",
+      path:"/frontend",
       element:<FRONTEND/>
+    },
+    {
+      path:"/",
+      element:<Api_practise/>
     }
   ]);
 
