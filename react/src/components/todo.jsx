@@ -7,7 +7,6 @@ function Todo() {
   const [description, setDescription] = useState("");
   const [priority, setPriority] = useState("");
 
- 
   const handleSubmit = () => {
     if (!title || !description || !priority) {
       alert("Please fill all fields!");
