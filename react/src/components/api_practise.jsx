@@ -16,8 +16,17 @@ const Api_practise = () => {
     }, []);
 
     return(
-        <div> empty</div>
+        <div> 
+            {value.map((product) =>(
+                <div key={product.id} className="border-2 border-black bg-[#3a1111] text-white p-[10px] m-[10px]">
+                    <h1 className="text-2xl">{product.title}</h1>
+                    <p className="text-lg">{product.description}</p>
+                    <p className="text-lg">Price: ${product.price}</p>
+                    <img src={product.image} alt={product.title} className="w-[100px] h-[100px]"/>
+                </div>
+            ))}
+        </div>
     );
-}
+};
 
 export default Api_practise;
