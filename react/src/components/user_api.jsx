@@ -38,6 +38,7 @@ const User_api = () => {
                     <th className="px-6 py-4">Username</th>
                     <th className="px-6 py-4">Phone</th>
                     <th className="px-6 py-4">Address</th>
+                    <th className="px-6 py-4">Status</th>
                 </tr>
             </thead>
 
@@ -71,6 +72,20 @@ const User_api = () => {
 
                         <td className="px-6 py-4 text-gray-600">
                             {user.address.city}, {user.address.street}, {user.address.zipcode}
+                        </td>
+
+                        <td className="px-6 py-4">
+                            <div className="flex gap-2">
+                        
+                                <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                                    Edit
+                                                        </button>
+                        
+                                <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+                                    Delete
+                                </button>
+                        
+                            </div>
                         </td>
 
                     </tr>
