@@ -79,7 +79,7 @@ const User_api = () => {
                         
                                 <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
                                     Edit
-                                                        </button>
+                                    </button>
                         
                                 <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
                                     Delete
