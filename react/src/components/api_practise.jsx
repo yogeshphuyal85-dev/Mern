@@ -1,10 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const Api_practise = () => {
     const [value, setValue] = useState([]);
-
+    const navigate = useNavigate();
 
     const fetchData = async () => {
         try {
@@ -25,6 +26,10 @@ const Api_practise = () => {
     <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">
         Fake Store Products
     </h1>
+    <button onClick={() => navigate("/user")}
+        className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition cursor:pointer">
+        Users
+    </button>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
