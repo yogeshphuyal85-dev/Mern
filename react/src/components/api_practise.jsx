@@ -6,11 +6,15 @@ const Api_practise = () => {
     const [value, setValue] = useState([]);
 
 
-    const fetchData = async () => {
-        const value = await axios.get("https://fakestoreapi.com/products");
-        console.log(value.data);
-        setValue(value.data);
-    };
+    try{
+        const fetchData = async () => {
+            const value = await axios.get("https://fakestoreapi.com/products");
+            console.log(value.data);
+            setValue(value.data);
+        };
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
     useEffect(() => {
         fetchData();
     }, []);
