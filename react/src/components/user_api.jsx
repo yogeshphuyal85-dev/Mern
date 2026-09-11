@@ -1,9 +1,9 @@
 import React from 'react'
 
-function user_api() {
+function User_api() {
   return (
     <div>user_api</div>
   )
 }
 
-export default user_api;
+export default User_api;

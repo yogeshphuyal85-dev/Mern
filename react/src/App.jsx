@@ -2,6 +2,7 @@ import React from "react";
 import Todo from "./components/todo.jsx";
 import FRONTEND from "./components/frntend.jsx";
 import Api_practise from "./components/api_practise.jsx";
+import User_api from "./components/user_api.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
@@ -22,7 +23,7 @@ const App = () => {
     },
     {
       path:"/user",
-      element:<user_api/>
+      element:<User_api/>
     }
   ]);
 
