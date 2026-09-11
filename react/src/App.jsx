@@ -19,6 +19,10 @@ const App = () => {
     {
       path:"/",
       element:<Api_practise/>
+    },
+    {
+      path:"/user",
+      element:<user_api/>
     }
   ]);
 
