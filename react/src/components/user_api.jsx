@@ -38,7 +38,7 @@ const User_api = () => {
                     <th className="px-6 py-4">Username</th>
                     <th className="px-6 py-4">Phone</th>
                     <th className="px-6 py-4">Address</th>
-                    <th className="px-6 py-4">Status</th>
+                    <th className="px-6 py-4">Action</th>
                 </tr>
             </thead>
 
