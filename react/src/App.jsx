@@ -4,6 +4,7 @@ import FRONTEND from "./components/frntend.jsx";
 import Api_practise from "./components/api_practise.jsx";
 import User_api from "./components/user_api.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AddProduct from "../pages/Add_products.jsx";
 
 
 const App = () => {
@@ -24,6 +25,10 @@ const App = () => {
     {
       path:"/user",
       element:<User_api/>
+    },
+    {
+      path:"/form",
+      element:<AddProduct/>
     }
   ]);
 
