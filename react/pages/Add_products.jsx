@@ -82,7 +82,7 @@ const AddProduct = () => {
         />
 
         <button type="submit" className="bg-blue-500 text-white font-bold">
-          Add
+          Addd
         </button>
       </form>
     </div>
