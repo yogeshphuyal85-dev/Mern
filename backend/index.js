@@ -17,7 +17,7 @@ app.use("/api", UserRoutes);
 
 app.get("/user", (req, res) => {
   const user = {
-    name: "Yogesh Phuyal",
+    username: "Yogesh Phuyal",
     email: "yogesh@gmail.com",
     phone_number: "9800000000",
     address: "Gothgaun, Morang",

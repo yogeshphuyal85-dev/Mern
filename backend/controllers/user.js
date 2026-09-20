@@ -2,7 +2,7 @@ import database from "../database/database.js";
 
 export const getUser = (req, res) => {
     const user={
-        name: "Yogesh Phuyal",
+        username: "Yogesh Phuyal",
         email: "yogesh@gmail.com",
         phone_number: "9800000000",
         address: "Gothgaun, Morang",
@@ -18,7 +18,7 @@ export const getUser = (req, res) => {
 export const postUser = (req, res) => {
     const {username, email, password, phone_number, address,} = req.body;
 
-    const q=`INSERT INTO users (name, email, password, phone_number, address) VALUES(?, ?, ?, ?, ?)`;
+    const q=`INSERT INTO users (username, email, password, phone_number, address) VALUES(?, ?, ?, ?, ?)`;
 
      database.query(q, [username, email, password, phone_number, address], (err, result) => {
         if (err) {
