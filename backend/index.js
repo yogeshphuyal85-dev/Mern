@@ -1,5 +1,5 @@
 import express from "express";
-import UserRoutes from "./routes/user.route.js";
+import UserRoutes from "./routes/user_route.js";
 import database from "./database/database.js";
 
 
