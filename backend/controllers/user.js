@@ -54,6 +54,31 @@ export const getSingleUser = (req, res) => {
     }
 };
 
+export const editUser = (req, res) => {
+    try{
+        const {id} = req.params;
+        const {username, email, password, phone_number, address} = req.body;
+
+        const q = "UPDATE users SET username = ?, email = ?, password = ?, phone_number = ?, address = ? WHERE id = ?";
+
+        database.query(q, [username, email, password, phone_number, address, id], (err, result) => {
+            if (err){
+                return res.send({
+                    message: "Error while updating data",
+                    error: err,
+                });
+            }
+            return res.send({
+                message: "Data updated successfully",
+                data: result,
+                });
+            });
+    }catch (error) {
+        console.log(error);
+        res.send(err);
+    }
+};
+
 
 export const postUser = (req, res) => {
     const {username, email, password, phone_number, address,} = req.body;
