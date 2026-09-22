@@ -32,7 +32,27 @@ export const getUser = (req, res) => {
 };
 
 
-export const getSingleUser 
+export const getSingleUser = (req, res) => {
+    try{
+        const {id} = req.params;
+
+        const q = "SELECT * FROM users WHERE id = ?";
+
+        database.query(q, [id], (err, result) => {
+            if (err) {
+                return res.status(500).send({
+                    message: "Error while fetching data",
+                    error: err,
+                });
+            }
+            return res.status(200).send({
+                data: result[0],
+            });
+        });
+    }catch (error) {
+        console.log(error);
+    }
+};
 
 
 export const postUser = (req, res) => {
