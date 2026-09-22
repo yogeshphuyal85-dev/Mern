@@ -7,7 +7,7 @@ const route = express.Router();
 
 route.get("/user", getUser);
 route.post("/post-user",postUser);
-route.get("/user/:id", getSingleUser);
+route.get("/get-user/:id", getSingleUser);
 route.put("/edit-user/:id", editUser);
 route.delete("/delete-user/:id", deleteUser);
 
