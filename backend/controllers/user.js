@@ -79,6 +79,29 @@ export const editUser = (req, res) => {
     }
 };
 
+export const deleteUser = (req, res) => {
+    try{
+        const {id} = req.params;
+
+        const q = "DELETE FROM users WHERE id = ?";
+
+        database.query(q, [id], (err, result) => {
+            if (err) {
+                return res.send({
+                    message: "Error while deleting data",
+                    error: err,
+                });
+            }
+            return res.send({
+                message: "Data deleted successfully",
+                data: result,
+            });
+        });
+    }catch (error) {
+        console.log(error);
+        res.send(err);
+    }
+};
 
 export const postUser = (req, res) => {
     const {username, email, password, phone_number, address,} = req.body;
