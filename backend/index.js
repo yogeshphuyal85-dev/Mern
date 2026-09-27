@@ -1,7 +1,7 @@
 import express from "express";
 import UserRoutes from "./routes/user_route.js";
 import database from "./database/database.js";
-import UserRoutes from "./routes/auth_route.js";
+import authRoutes from "./routes/auth_route.js";
 
 
 const app = express();
@@ -11,7 +11,7 @@ const PORT = 5000;
 
 
 app.use("/api", UserRoutes);
-app.use("/auth", authroutes);
+app.use("/api", authRoutes);
 // app.get("/", (req, res) => {
 //   res.send("Backend is running!");
 // });
