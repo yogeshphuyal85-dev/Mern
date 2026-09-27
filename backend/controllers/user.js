@@ -97,9 +97,11 @@ export const postUser = (req, res) => {
     const {username, email, password, phone_number, address,} = req.body;
 
     const q=`INSERT INTO users (username, email, password, phone_number, address) VALUES(?, ?, ?, ?, ?)`;
-    
+    const salt= bcrypt.genSaltSync(10);
+    const hashedPassword= bcrypt.hashSync(password, salt);
+    console.log(hashedPassword);
 
-     database.query(q, [username, email, password, phone_number, address], (err, result) => {
+     database.query(q, [username, email, hashedPassword, phone_number, address], (err, result) => {
         if (err) {
             return res.send({message: "Error while inserting data", error: err});
         }
