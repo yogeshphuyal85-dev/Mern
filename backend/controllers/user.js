@@ -97,6 +97,7 @@ export const postUser = (req, res) => {
     const {username, email, password, phone_number, address,} = req.body;
 
     const q=`INSERT INTO users (username, email, password, phone_number, address) VALUES(?, ?, ?, ?, ?)`;
+    
 
      database.query(q, [username, email, password, phone_number, address], (err, result) => {
         if (err) {
