@@ -1,4 +1,5 @@
 import database from "../database/database.js";
+import bcrypt from "bcryptjs";
 
 export const getUser = (req, res) => {
 

@@ -8,7 +8,7 @@ export const isAuth = (req, res, next) => {
     });
   }
 
-  const userData = jwt.verify(token, "secretkey");
+  const userData = jwt.verify(token, "secretKey");
 
   req.userrole =
     userData.userrole === "admin"

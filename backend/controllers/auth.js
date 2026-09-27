@@ -6,7 +6,7 @@ export const login = (req, res) => {
   try {
     const { email, password } = req.body;
 
-    const q = `select * from user where email= ?`;
+    const q = `select * from users where email= ?`;
 
     database.query(q, [email], (err, result) => {
       if (err) {
