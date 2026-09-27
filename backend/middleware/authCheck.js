@@ -10,12 +10,12 @@ export const isAuth = (req, res, next) => {
 
   const userData = jwt.verify(token, "secretkey");
 
-  req.userRole =
-    userData.userRole === "admin"
+  req.userrole =
+    userData.userrole === "admin"
       ? "admin"
-      : userData.userRole === "user"
+      : userData.userrole === "user"
         ? "user"
-        : userData.userRole === "superAdmin"
+        : userData.userrole === "superAdmin"
           ? "superAdmin"
           : null;
 
@@ -23,7 +23,7 @@ export const isAuth = (req, res, next) => {
 };
 
 export const isAdmin = (req, res, next) => {
-  const role = req.userRole;
+  const role = req.userrole;
   if (role === "admin") {
     next();
   } else {
@@ -33,7 +33,7 @@ export const isAdmin = (req, res, next) => {
   }
 };
 export const isSuperAdmin = (req, res, next) => {
-  const role = req.userRole;
+  const role = req.userrole;
 
   if (role === "superAdmin") {
     next();
@@ -44,7 +44,7 @@ export const isSuperAdmin = (req, res, next) => {
   }
 };
 export const isSuperAdminOrAdmin = (req, res, next) => {
-  const role = req.userRole;
+  const role = req.userrole;
 
   if (role === "superAdmin" || role === "admin") {
     next();
@@ -56,7 +56,7 @@ export const isSuperAdminOrAdmin = (req, res, next) => {
 };
 
 export const isUser = (req, res, next) => {
-  const role = req.userRole;
+  const role = req.userrole;
 
   if (role === "user") {
     next();
