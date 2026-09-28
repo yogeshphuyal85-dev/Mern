@@ -49,7 +49,7 @@ function Todo() {
     <div className="min-h-screen border-2 border-black bg-[#3a1111]">
 
       <h1 className="text-center text-white text-5xl pt-2">
-        TODO LIST
+        TODO LIST.
       </h1>
 
       
@@ -65,7 +65,7 @@ function Todo() {
           onClick={handleAdd}
           className="ml-[10px] border-2 border-black text-2xl cursor-pointer py-[10px] px-[20px] bg-white rounded-lg hover:bg-gray-300"
         >
-          Add
+          Add.
         </button>
 
       </div>
