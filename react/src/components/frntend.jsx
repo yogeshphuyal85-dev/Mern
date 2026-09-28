@@ -93,15 +93,15 @@ function FRONTEND() {
         <nav className="hidden md:block">
           <ul className="flex items-center gap-8 list-none">
             <li className="cursor-pointer text-gray-800 hover:text-blue-600 transition">
-              Courses
+              Courses.
             </li>
 
             <li className="cursor-pointer text-gray-800 hover:text-blue-600 transition">
-              Community
+              Community.
             </li>
 
             <li className="cursor-pointer text-gray-800 hover:text-blue-600 transition">
-              Blog
+              Blog.
             </li>
           </ul>
         </nav>
