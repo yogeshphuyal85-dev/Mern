@@ -22,7 +22,6 @@ export const getUser = (req, res) => {
     }
 };
 
-
 export const getSingleUser = (req, res) => {
     try{
         const {id} = req.params;
