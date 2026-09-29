@@ -55,7 +55,7 @@ export const editUser = (req, res) => {
         database.query(q, [username, email, password, phone_number, address, id], (err, result) => {
             if (err){
                 return res.send({
-                    message: "Error while updating data",
+                    message: "Error while updating dataa",
                     error: err,
                 });
             }
