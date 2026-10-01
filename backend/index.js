@@ -12,27 +12,7 @@ const PORT = 5000;
 
 app.use("/api", UserRoutes);
 app.use("/api", authRoutes);
-// app.get("/", (req, res) => {
-//   res.send("Backend is running!");
-// });
 
-
-// app.get("/user", (req, res) => {
-//   const user = {
-//     username: "Yogesh Phuyal",
-//     email: "yogesh@gmail.com",
-//     phone_number: "9800000000",
-//     address: "Gothgaun, Morang",
-//     role: "user",
-//   };
-//   console.log(user);
-//   res.send(user);
-// });
-
-// app.post("/post-user", (req, res) => {
-//     const{ username, password} = req.body;
-//     res.send({username: username, password: password});
-// });
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
