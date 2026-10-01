@@ -5,6 +5,7 @@ import authRoutes from "./routes/auth_route.js";
 
 
 const app = express();
+app.use (cors());
 app.use(express.json());
 const PORT = 5000;
 
